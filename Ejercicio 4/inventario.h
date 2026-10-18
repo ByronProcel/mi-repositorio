@@ -14,4 +14,6 @@ int obtenerIndiceMasBarato(float precios[], int cantidad);
 
 int ingresarProductos(char nombres[][LARGO_NOMBRE], float precios[]);
 
+int buscarProductoPorNombre(char nombres[][LARGO_NOMBRE], int cantidad, char nombreBuscado[]);
+
 #endif

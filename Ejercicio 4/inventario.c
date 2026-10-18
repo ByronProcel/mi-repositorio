@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "inventario.h"
 
 float calcularTotal(float precios[], int cantidad)
@@ -84,4 +85,18 @@ int ingresarProductos(char nombres[][LARGO_NOMBRE], float precios[])
         while(getchar() != '\n');
     }
     return cantidad;
+}
+
+int buscarProductoPorNombre(char nombres[][LARGO_NOMBRE], int cantidad, char nombreBuscado[])
+{
+    int i;
+    if (cantidad <= 0) {
+        return -1;
+    }
+    for (i = 0; i < cantidad; i++) {
+        if (strcmp(nombres[i], nombreBuscado) == 0) {
+            return i;
+        }
+    }
+    return -1;
 }
